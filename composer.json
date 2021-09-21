@@ -1,0 +1,28 @@
+{
+    "name": "oxid-academy/graphql-product-extension",
+    "description": "Description of the package.",
+    "type": "oxideshop-module",
+    "keywords": ["oxid", "modules", "eShop", "graphql"],
+    "homepage": "https://www.oxid-esales.com",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "OXID Academy",
+            "email": "academy@oxid-esales.com"
+        }
+    ],
+    "extra": {
+        "oxideshop": {
+            "target-directory": "oxac/graphql-product-extension"
+        }
+    },
+    "require": {
+        "php": "^7.4",
+        "oxid-esales/graphql-storefront": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OxidAcademy\\GraphQL\\ProductExtension\\": "../../../source/modules/oxac/graphql-product-extension/src"
+        }
+    }
+}
