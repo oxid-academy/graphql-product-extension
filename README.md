@@ -15,12 +15,16 @@ value just changed.
 composer require oxid-academy/graphql-product-extension
 vendor/bin/oe-console oe:module:activate oe_graphql_storefront
 vendor/bin/oe-console oe:module:activate oxac_graphql_productextension
-
+```
+  
+[ ! ] The module oxid-academy/graphql-product must be deactivated:  
+```shell
+vendor/bin/oe-console oe:module:deactivate oxac_graphql_product
 ```
 
+
 ## Usage
-[ ! ] The module oxid-academy/graphql-product has to be deactivated:  
-  `vendor/bin/oe-console oe:module:deactivate oxac_graphql_product`
+
 
 You can use your favourite GraphQL client to explore the API, if you do not already have one installed, you may use 
 [Altair GraphQL Client](https://altair.sirmuel.design/).
