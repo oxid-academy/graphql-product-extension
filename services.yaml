@@ -4,12 +4,8 @@ services:
         public: false
         autowire: true
 
-    #OxidAcademy\GraphQL\ProductExtension\DataType\ProductExtend:
-    #    class: OxidAcademy\GraphQL\ProductExtension\Product\DataType\ProductExtend
-
     OxidAcademy\GraphQL\ProductExtension\:
         resource: 'src/*'
-        #exclude: 'src/**/{Exception}'
         public: true
 
     OxidAcademy\GraphQL\ProductExtension\Shared\Service\NamespaceMapper:
