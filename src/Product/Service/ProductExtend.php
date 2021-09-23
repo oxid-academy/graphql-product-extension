@@ -17,6 +17,16 @@ use function strrev;
 final class ProductExtend
 {
     /**
+     * Wrapper for different wording
+     *
+     * @Field()
+     */
+    public function itemNumber(ProductDataType $product): string
+    {
+        return (string) $product->getEshopModel()->getFieldData('oxartnum');
+    }
+
+    /**
      * Mocks a custom field by using and changing a native field.
      *
      * @Field()
@@ -26,15 +36,5 @@ final class ProductExtend
         $title = $product->getEshopModel()->getFieldData('oxtitle');
         $shuffledTitle = strrev($title);
         return sprintf('%s <-> %s', $title, $shuffledTitle);
-    }
-
-    /**
-     * Wrapper for different wording
-     *
-     * @Field()
-     */
-    public function itemNumber(ProductDataType $product): string
-    {
-        return (string) $product->getEshopModel()->getFieldData('oxartnum');
     }
 }

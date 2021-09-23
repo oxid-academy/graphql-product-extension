@@ -1,6 +1,16 @@
 
+## About
+
+This module is extending the Storefront Product object by adding two new fields: `itemNumber` and `subtitle`.
+### itemNumber
+A wrapper for the field `oxarticles__oxartnum` and shows the basic functionality.
+
+### subtitle
+Represent a custom field of the table `oxarticles_oxartnum`. To keep things simple an existing field is taken and the
+value just changed.
 
 ## Install
+
 ```shell
 composer require oxid-academy/graphql-product-extension
 vendor/bin/oe-console oe:module:activate oe_graphql_storefront
@@ -9,9 +19,32 @@ vendor/bin/oe-console oe:module:activate oxac_graphql_productextension
 ```
 
 ## Usage
-- 
-- The module oxid-academy/graphql-product must be deactivated:  
-  `vendor/bin/oe-console oe:module:deactivate oxacgraphqlproduct`
+[ ! ] The module oxid-academy/graphql-product has to be deactivated:  
+  `vendor/bin/oe-console oe:module:deactivate oxac_graphql_product`
+
+You can use your favourite GraphQL client to explore the API, if you do not already have one installed, you may use 
+[Altair GraphQL Client](https://altair.sirmuel.design/).
+    
+#### Request
+```
+{
+  product (productId: "05848170643ab0deb9914566391c0c63") {
+    itemNumber,
+    subtitle
+  }
+}
+```
+#### Response
+```
+{
+  "data": {
+    "product": {
+      "itemNumber": "1402",
+      "subtitle": "Harness MADTRIXX <-> XXIRTDAM ssenraH"
+    }
+  }
+}
+```
 
 ## Sources
 
