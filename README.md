@@ -29,9 +29,11 @@ vendor/bin/oe-console oe:module:deactivate oxac_graphql_product
 You can use your favourite GraphQL client to explore the API, if you do not already have one installed, you may use 
 [Altair GraphQL Client](https://altair.sirmuel.design/).
     
+### Query
+URL: `http://localhost/graphql/?shp=1&lang=0`
 #### Request
 ```
-{
+query {
   product (productId: "05848170643ab0deb9914566391c0c63") {
     itemNumber,
     subtitle
@@ -44,7 +46,7 @@ You can use your favourite GraphQL client to explore the API, if you do not alre
   "data": {
     "product": {
       "itemNumber": "1402",
-      "subtitle": "Harness MADTRIXX <-> XXIRTDAM ssenraH"
+      "subtitle": "sadsadasd <-> dsadasdas"
     }
   }
 }
