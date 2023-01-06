@@ -11,15 +11,9 @@
             "email": "academy@oxid-esales.com"
         }
     ],
-    "extra": {
-        "oxideshop": {
-            "target-directory": "oxac/graphql-product-extension"
-        }
-    },
     "require": {
-            "php": "^7.4 | ^8.0",
-            "oxid-esales/oxideshop-ce": "^6.12 | 6.5.x-dev",
-            "oxid-esales/graphql-storefront": "^v2.1.0"
+            "php": "^8.0 | ^8.1",
+            "oxid-esales/graphql-storefront": "dev-b-7.0.x"
     },
     "autoload": {
         "psr-4": {
